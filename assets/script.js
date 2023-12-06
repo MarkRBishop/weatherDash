@@ -10,7 +10,7 @@ function createCityButtons() {
     const buttonsContainer = document.querySelector(".buttons-container");
     buttonsContainer.innerHTML = "";
 
-    cities.slice(0, 8).forEach(city => {
+    cities.slice(-8).reverse().forEach(city => {
         const button = document.createElement("button");
         button.className = "btn btn-secondary btn-block mb-2 cityButton";
         button.setAttribute("data-city", city);
@@ -22,6 +22,14 @@ function createCityButtons() {
 // Function to save a city to local storage
 function saveCity(city) {
     const cities = JSON.parse(localStorage.getItem("cities")) || [];
+    if (cities.length === 8) {
+        const removedCity = cities.shift();
+        const removedButton = document.querySelector('[data-city ="${removedCity}"]')
+        if (removedButton) {
+            removedButton.remove()
+        }
+    }
+
     if (!cities.includes(city)) {
         cities.push(city);
         localStorage.setItem("cities", JSON.stringify(cities));
@@ -107,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const cityInput = document.getElementById("cityInput").value.trim();
         if (cityInput !== "") {
             getWeatherData(cityInput);
+            document.getElementById("cityInput").value = ""
         }
     });
 
@@ -116,6 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const cityInput = document.getElementById("cityInput").value.trim();
             if (cityInput !== "") {
                 getWeatherData(cityInput);
+                document.getElementById("cityInput").value = ""
             }
         }
     });
