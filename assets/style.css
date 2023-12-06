@@ -47,6 +47,7 @@ body {
 
 .weather-container {
     margin-top: 20px;
+    margin-right:10%;
 }
 
 #currentWeather,
@@ -57,14 +58,13 @@ body {
 #currentWeather {
     border: 1px solid #ccc;
     padding: 10px;
-    margin-right: 10%;
 }
 
 
 .forecast-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 10px;
 }
 
@@ -75,7 +75,6 @@ body {
 }
 
 .forecast-day {
-
     background-color: #35424a; /* Dark blue background color */
     color: #ffffff; /* White text color */
     padding: 10px;
@@ -86,10 +85,9 @@ body {
 @media (max-width: 767px) {
     .forecast-day {
         width: 100%;
-        margin-right: 0;
     }
 
-    #currentWeather{
+    .weather-container{
         margin-left: 10%
     }
 
