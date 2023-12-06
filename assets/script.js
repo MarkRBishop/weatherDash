@@ -71,10 +71,10 @@ function currentWeather(data) {
 function weatherForecast(data) {
     const forecastList = data.list;
     const forecastElement = document.getElementById("forecast");
-
     forecastElement.innerHTML = "";
 
-    forecastElement.innerHTML += `<h3>5-Day Forecast</h3>`
+    const forecastTitleContainer = document.getElementById("forecastTitle")
+    forecastTitleContainer.innerHTML = `<h3 class="forecast-title">5-Day Forecast:</h3>`
 
     const forecastContainer = document.createElement("div");
     forecastContainer.classList.add("forecast-container");
@@ -96,9 +96,9 @@ function weatherForecast(data) {
         dayContainer.innerHTML += `<p>Wind: ${forecastData.wind.speed} mph</p>`;
 
         forecastContainer.appendChild(dayContainer);
-    }
 
-    forecastElement.appendChild(forecastContainer)
+    }
+    forecastElement.appendChild(forecastContainer);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -130,4 +130,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Call the function to create city buttons when the page loads
     createCityButtons();
+    document.getElementById("cityInput").value = "";
 });

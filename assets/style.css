@@ -1,5 +1,25 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.app-header {
+    background: linear-gradient(to right, #337bb3, rgb(5, 8, 158));
+    padding: 10px;
+    text-align: center;
+}
+
+.app-header h1 {
     margin: 0;
 }
 
@@ -12,7 +32,7 @@ body {
 
 .search-container {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 .buttons-container {
@@ -21,7 +41,8 @@ body {
 }
 
 .cityButton {
-    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .weather-container {
@@ -36,20 +57,43 @@ body {
 #currentWeather {
     border: 1px solid #ccc;
     padding: 10px;
+    margin-right: 10%;
 }
 
-#row{
-    display: flex;
-}
 
 .forecast-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.forecast-title {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .forecast-day {
+
     background-color: #35424a; /* Dark blue background color */
     color: #ffffff; /* White text color */
     padding: 10px;
     margin: 5px;
     text-align: center;
+}
+
+@media (max-width: 767px) {
+    .forecast-day {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #currentWeather{
+        margin-left: 10%
+    }
+
+    .forecast-title {
+        margin: 10px;
+    }
 }

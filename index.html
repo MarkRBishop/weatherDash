@@ -10,7 +10,15 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="app-header">
+                    <h1 class="text-center text-white">WeatherDash</h1>
+                </div>
+            </div>
+        </div>
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
                 <div class="search-container">
@@ -24,9 +32,9 @@
             </div>
             <div class="col-md-9">
                 <div class="weather-container">
-                    <div id="currentWeather">
-                    </div>
-                    <div id="forecast">
+                    <div id="currentWeather"></div>
+                    <div id="forecastTitle"></div>
+                    <div id="forecast" class="d-md-flex flex-md-row flex-column">
                     </div>
                 </div>
             </div>
