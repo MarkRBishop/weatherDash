@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- necessary links for bootstrap and css file -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style.css">
     <title>WeatherDash</title>
 </head>
 
 <body>
+    <!-- header container at the top -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -18,9 +20,11 @@
                 </div>
             </div>
         </div>
+    <!-- container for the bottom portion of the app and bootstrap functionality -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
+            <!-- container for the searchbar and buttons -->
+            <div class="col-md-3">                
                 <div class="search-container">
                     <h2>Search for City</h2>
                     <input type="text" id="cityInput" class="form-control mb-2" placeholder="Enter city name">
@@ -30,8 +34,10 @@
                     </div>
                 </div>
             </div>
+            <!-- container for the current weather and weather forecasts -->
             <div class="col-md-9">
                 <div class="weather-container">
+                    <!-- several containers to dynamically inset elements into  -->
                     <div id="currentWeather"></div>
                     <div id="forecastTitle"></div>
                     <div id="forecast" class="d-md-flex flex-md-row flex-column">
@@ -41,6 +47,7 @@
         </div>
     </div>
 
+    <!-- necessary scripts for jquery, js delivr, bootstrap and ofcourse the main js file -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
