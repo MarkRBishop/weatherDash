@@ -4,7 +4,6 @@ body {
 }
 
 .container {
-    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -13,6 +12,7 @@ body {
 
 .search-container {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .buttons-container {
@@ -31,4 +31,9 @@ body {
 #currentWeather,
 #forecast {
     margin-top: 10px;
+}
+
+#currentWeather {
+    border: 1px solid #ccc;
+    padding: 10px;
 }

@@ -4,37 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style.css">
-    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>WeatherDash</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="search-container">
-            <h2>Search for City</h2>
-            <input type="text" id="cityInput" placeholder="Enter city name">
-            <button id="searchButton">Search</button>
-        </div>
-        <div class="buttons-container">
-            <button class="cityButton" data-city="Atlanta">Atlanta</button>
-            <button class="cityButton" data-city="Denver">Denver</button>
-            <button class="cityButton" data-city="Seattle">Seattle</button>
-            <button class="cityButton" data-city="San Francisco">San Francisco</button>
-            <button class="cityButton" data-city="Orlando">Orlando</button>
-            <button class="cityButton" data-city="New York">New York</button>
-            <button class="cityButton" data-city="Chicago">Chicago</button>
-            <button class="cityButton" data-city="Austin">Austin</button>
-        </div>
-        <div class="weather-container">
-            <div id="currentWeather">
-                <!-- Display current weather information here -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="search-container">
+                    <h2>Search for City</h2>
+                    <input type="text" id="cityInput" class="form-control mb-2" placeholder="Enter city name">
+                    <button id="searchButton" class="btn btn-primary btn-block">Search</button>
+                    <hr>
+                    <div class="buttons-container mt-2">
+                    </div>
+                </div>
             </div>
-            <div id="forecast">
-                <!-- Display 5-day forecast here -->
+            <div class="col-md-8">
+                <div class="weather-container">
+                    <div id="currentWeather">
+                    </div>
+                    <div id="forecast">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="assets/script.js"></script>
 </body>
 
