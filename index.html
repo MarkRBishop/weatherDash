@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="search-container">
+            <h2>Search for City</h2>
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button id="searchButton">Search</button>
+        </div>
+        <div class="buttons-container">
+            <button class="cityButton" data-city="Atlanta">Atlanta</button>
+            <button class="cityButton" data-city="Denver">Denver</button>
+            <button class="cityButton" data-city="Seattle">Seattle</button>
+            <button class="cityButton" data-city="San Francisco">San Francisco</button>
+            <button class="cityButton" data-city="Orlando">Orlando</button>
+            <button class="cityButton" data-city="New York">New York</button>
+            <button class="cityButton" data-city="Chicago">Chicago</button>
+            <button class="cityButton" data-city="Austin">Austin</button>
+        </div>
+        <div class="weather-container">
+            <div id="currentWeather">
+                <!-- Display current weather information here -->
+            </div>
+            <div id="forecast">
+                <!-- Display 5-day forecast here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
