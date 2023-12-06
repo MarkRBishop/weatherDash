@@ -74,6 +74,11 @@ function weatherForecast(data) {
 
     forecastElement.innerHTML = "";
 
+    forecastElement.innerHTML += `<h3>5-Day Forecast</h3>`
+
+    const forecastContainer = document.createElement("div");
+    forecastContainer.classList.add("forecast-container");
+
     for (let i = 1; i < forecastList.length; i += 8) {
         const forecastData = forecastList[i];
         const dayContainer = document.createElement("div");
@@ -90,8 +95,10 @@ function weatherForecast(data) {
         dayContainer.innerHTML += `<p>Humidity: ${forecastData.main.humidity}%</p>`;
         dayContainer.innerHTML += `<p>Wind: ${forecastData.wind.speed} mph</p>`;
 
-        forecastElement.appendChild(dayContainer);
+        forecastContainer.appendChild(dayContainer);
     }
+
+    forecastElement.appendChild(forecastContainer)
 }
 
 document.addEventListener("DOMContentLoaded", function () {

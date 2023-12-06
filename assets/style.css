@@ -37,3 +37,19 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
 }
+
+#row{
+    display: flex;
+}
+
+.forecast-container {
+    display: flex;
+}
+
+.forecast-day {
+    background-color: #35424a; /* Dark blue background color */
+    color: #ffffff; /* White text color */
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
